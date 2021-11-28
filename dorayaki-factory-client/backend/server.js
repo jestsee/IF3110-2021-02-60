@@ -180,9 +180,6 @@ app.post("/accept", (req, res) => {
   console.log(req.body.id.varian);
   bahancukup = true;
 
-  console.log("BAHAN BAKU CKUP GA KOK NGACO");
-  console.log(bahancukup);
-
   if (req.body.id.status == "WAITING") {
     // cek resep
     const resep = "SELECT * FROM recipe WHERE name LIKE ?";
@@ -217,7 +214,9 @@ app.post("/accept", (req, res) => {
               bahannya[4].amount < ngaram ||
               bahannya[5].amount < nsusu
             ) {
-              console.log("bahan baku tidak mencukupi");
+              res.status(400).json({
+                message: "Stok bahan baku tidak mencukupi!",
+              });
             }
             // bahan baku mencukupi
             else {
@@ -267,8 +266,10 @@ app.post("/accept", (req, res) => {
       }
     });
   } else {
-    console.log("Pastikan memilih request yang berstatus WAITING");
-    return res.status(400).send();
+    // console.log("Pastikan memilih request yang berstatus WAITING");
+    res
+      .status(400)
+      .json({ message: "Pastikan memillih request berstatus WAITING" });
   }
 });
 
@@ -285,7 +286,9 @@ app.post("/decline", (req, res) => {
       }
     });
   } else {
-    console.log("Pastikan memilih request yang berstatus WAITING");
+    res
+      .status(400)
+      .json({ message: "Pastikan memillih request berstatus WAITING" });
   }
 });
 

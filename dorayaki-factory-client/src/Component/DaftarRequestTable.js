@@ -78,8 +78,8 @@ export const DaftarRequestTable = () => {
   const acceptPressed = (a) => {
     const token = localStorage.getItem("token");
     console.log("ahoy");
-    console.log(a.hasil[0]);
-    console.log(a.hasil[0].varian);
+    // console.log(a.hasil[0]);
+    // console.log(a.hasil[0].varian);
 
     axios
       .post("http://localhost:3000/accept", {
@@ -90,7 +90,7 @@ export const DaftarRequestTable = () => {
         window.location.reload();
       })
       .catch((error) => {
-        console.log("Error: ", error);
+        alert(String(error.response.data.message));
       });
   };
 
@@ -108,7 +108,7 @@ export const DaftarRequestTable = () => {
         window.location.reload();
       })
       .catch((error) => {
-        console.log("Error: ", error);
+        alert(String(error.response.data.message));
       });
   };
 
