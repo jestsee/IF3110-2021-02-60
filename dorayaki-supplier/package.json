@@ -1,0 +1,20 @@
+{
+  "name": "dorayaki-supplier",
+  "version": "1.0.0",
+  "description": "* mvn install\r * mvn clean compile assembly:single\r * java -jar .\\target\\demo-1.0-SNAPSHOT-jar-with-dependencies.jar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.informatika.org/if3110-2021-02-60/dorayaki-supplier.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemailer": "^6.7.2",
+    "soap": "^0.43.0"
+  }
+}
