@@ -4,6 +4,16 @@
 ```
 node server.js
 ```
+* databasenya jangan lupa dibikin dulu (cd ke database)
+```
+node insert_db.js
+node insert_recipe.js
+node insert_request.js
+```
+* kalo bermasalah pas jalanin node/npm nya coba di-install dulu modul2nya
+```
+npm -i <nama-module>
+```
 di terminal lain jalanin
 ```
 npm start
