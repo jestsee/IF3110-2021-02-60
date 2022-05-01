@@ -1,28 +1,28 @@
-# Cara jalanin
+# How to run
 ## dorayaki-factory client
-* cd ke backend
+* cd backend
 ```
 node server.js
 ```
-* databasenya jangan lupa dibikin dulu (cd ke database)
+* please make sure the database is already exists (cd database)
 ```
 node insert_db.js
 node insert_recipe.js
 node insert_request.js
 ```
-* kalo bermasalah pas jalanin node/npm nya coba di-install dulu modul2nya
+* please make sure all modules already installed
 ```
 npm -i <nama-module>
 ```
-di terminal lain jalanin
+open separate terminal and then run
 ```
 npm start
 ```
 
 ## dorayaki-supplier
-* pastiin punya maven
-* maks Java 15 (direkomendasiin Java 15)
-* install dependencies (gosah cd kemana2) <br>
+* make sure maven already installed
+* Java 15
+* install all dependencies <br>
 ``` 
 mvn package 
 ```
@@ -35,11 +35,10 @@ mvn clean compile assembly:single
 ```
 java -jar .\target\demo-1.0-SNAPSHOT-jar-with-dependencies.jar
 ```
-kalo yang java -jav ga bisa coba cd ke folder dimana App.java berada, terus run file javanya
-
+if there's a problem with java -jav, try to go to the directory where App.java exists and then run the java file.
 
 ## dorayaki-store
-* jalanin server php kayak biasa, misalnya
+* run php server
 ``` 
 php -S localhost:8000
 ```
