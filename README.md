@@ -4,7 +4,7 @@
 ```
 node server.js
 ```
-* please make sure the database is already exists (cd database)
+* please make sure the database already exists (cd database)
 ```
 node insert_db.js
 node insert_recipe.js
@@ -12,7 +12,7 @@ node insert_request.js
 ```
 * please make sure all modules already installed
 ```
-npm -i <nama-module>
+npm -i
 ```
 open separate terminal and then run
 ```
